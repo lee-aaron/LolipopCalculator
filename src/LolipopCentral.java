@@ -11,9 +11,9 @@ public class LolipopCentral {
 		LolipopGames lolipopGames = new LolipopGames();
 		lolipopGames.dice.rollDice();
 		for(;;){
-			System.out.println("What mini-game would you like to play? Connect4, TicTacToe, or Dice Roll ");
+			System.out.println("What mini-game would you like to play? Connect4, TicTacToe, or Dice Roll. Enter 'Quit' to quit");
 			mg=scan.nextString();
-			if(mg = "Connect4"){
+			if(mg.equalsIgnoreCase("Connect4")){
 				cBoard();
 				printBoard();
 				System.out.println("Choose a column #1-7 to place your piece");
