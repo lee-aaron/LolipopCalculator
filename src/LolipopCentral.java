@@ -1,39 +1,28 @@
 import java.util.*;
 
+
 public class LolipopCentral {
-	
+	static Scanner scan = new Scanner(System.in);
 	protected int money;
 	
 	public static void main(String []args)
 	{
-		String mg;
-		Scanner scan = new Scanner (System.in);
 		LolipopGames lolipopGames = new LolipopGames();
 		lolipopGames.dice.rollDice();
+		Connect4 CF = new Connect4(); //Connect4 Object
 		for(;;){
 			System.out.println("What mini-game would you like to play? Connect4, TicTacToe, or Dice Roll ");
-			mg=scan.nextString();
-			if(mg = "Connect4"){
-				cBoard();
-				printBoard();
-				System.out.println("Choose a column #1-7 to place your piece");
-
-				while (true) {
-					drop('X');
-					printBoard();
-					if (checkWin('X')) {
-						break;
-					}
-					if (isTied()) {
-						System.out.println("Game is tied");
-						break;
-					}
-					drop('0');
-					printBoard();
-					if (checkWin('0')) {
-						break;
-					}
-				}
+			String mg=scan.next(); //answer for mini game
+			if(mg.equalsIgnoreCase("Connect4")){
+				System.out.println("hi");
+				CF.Connect();
+			}
+			
+			else if(mg.equalsIgnoreCase("TicTacToe")){
+				break;
+			}
+			else{
+				break;
 			}
 			
 		}
