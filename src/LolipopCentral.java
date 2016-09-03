@@ -19,7 +19,7 @@ public class LolipopCentral {
 			}
 			
 			else if(mg.equalsIgnoreCase("TicTacToe")){
-				break;
+				
 			}
 			else{
 				break;
