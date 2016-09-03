@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Connect4 {
+	
 	final static int width = 7; // row
 	final static int height = 7; // col
 	final static String prompt1 = "Player 1's turn: ";
@@ -9,7 +10,9 @@ public class Connect4 {
 	static Scanner scan = new Scanner(System.in);
 	static int piecesPlaced = 0;
 
-	public static void drop(char b) {
+
+	
+	public void drop(char b) {
 		String prompt = b == 'X' ? prompt1 : prompt2;
 		int count = 0;
 		System.out.println(prompt);
@@ -40,7 +43,7 @@ public class Connect4 {
 		}
 	}
 
-	public static void cBoard() {
+	public void cBoard() {
 		for (int row = 0; width > row; row++) {
 			for (int col = 0; height > col; col++) {
 				field[row][col] = ' ';
@@ -48,7 +51,7 @@ public class Connect4 {
 		}
 	}
 
-	public static void printBoard() {
+	public void printBoard() {
 		// prints the board
 		for (int row = width - 1; row >= 0; row--) {
 			System.out.print("| ");
@@ -63,7 +66,7 @@ public class Connect4 {
 		System.out.println();
 	}
 
-	public static boolean checkWin(char b) {
+	public boolean checkWin(char b) {
 		// check for | vertical win
 		for (int row = 0; row < width; row++) {
 			for (int col = 0; col < height - 4; col++) {
@@ -118,7 +121,28 @@ public class Connect4 {
 		return false;
 	}
 
-	public static boolean isTied() {
+	public boolean isTied() {
 		return piecesPlaced >= width * height;
 	}
-
+	public void Connect(){
+		cBoard();
+		printBoard();
+		System.out.println("Choose a column #1-7 to place your piece");
+		while (true) {
+			drop('X');
+			printBoard();
+			if (checkWin('X')) {
+				break;
+			}
+			if (isTied()) {
+				System.out.println("Game is tied");
+				break;
+			}
+			drop('0');
+			printBoard();
+			if (checkWin('0')) {
+				break;
+			}
+		}
+	}
+}
