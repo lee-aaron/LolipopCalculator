@@ -1,6 +1,6 @@
 # LolipopCalculator™
 
-A Calculator For: Games and Lollipops
+A Calculator For: Games and Lolipops
 
 A project completed using our free time.
 
