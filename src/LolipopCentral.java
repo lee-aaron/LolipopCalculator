@@ -4,7 +4,7 @@ public class LolipopCentral {
 	static Scanner scan = new Scanner(System.in);
 	
 	
-	public static void main(String []args) throws Exception{
+	public static void main(String []args){
 		System.out.println("Welcome to LolipopCentral!" + "\n" + "Here, you can play minigames and earn " + "\n" + "Lollipops to buy items in the shop" + "\n");
 		
 		LolipopGames lolipopGames = new LolipopGames();
