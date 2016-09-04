@@ -1,7 +1,8 @@
 # LolipopCalculator
 
-A Calculator For:
-Games and Money
+A Calculator For: Games and Money
+
+A project completed using our free time.
 
 #Features:
 
