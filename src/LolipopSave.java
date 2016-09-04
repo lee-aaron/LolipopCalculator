@@ -4,6 +4,7 @@ public class LolipopSave {
 	
 	static File file;
 	static FileOutputStream outFile;
+	static InputStream input;
 	
 	//Constructor
 	public LolipopSave() {
@@ -37,9 +38,24 @@ public class LolipopSave {
 	}
 	
 	//Need to implement ability to read data from save file
-	public void readData()
+	public double readData() throws IOException
 	{
-		
+		int i = 0;
+		double data = 0;
+		try {
+			input = new FileInputStream("C:/Data.txt");		//Must match File file
+			while((i=input.read()) != -1) {
+				data = (double) i;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if(input != null)
+			{
+				input.close();
+			}
+			return data;
+		}
 	}
 	
 }
