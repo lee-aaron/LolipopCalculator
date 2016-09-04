@@ -8,7 +8,10 @@ public class DiceRoll {
 		
 	}
 	
-	//Roll between 0.00 and 100.00; Returns a decimal in the hundredth place
+	/*Roll between 0.00 and 100.00; Returns a decimal in the hundredth place
+	 *Giving House 2%
+	 *Implementing rolls above and scalar return multiplier
+	 */
 	public void rollDice() {
 		Double rand = Math.random() * 100;
 		String s = String.valueOf(rand);
@@ -22,7 +25,20 @@ public class DiceRoll {
 				dicey = Long.parseLong(y);
 			}
 		}
-		System.out.println(dice + "." + dicey);
+		if(dice <= 2)
+		{
+			rollDice();
+		} else {
+			System.out.println(dice + "." + dicey);
+		}
+		
+	}
+	
+	//Used to give multiplier based on odds of winning
+	private void returnMultiplier(Long dice)
+	{
+		Long scalar[] = new Long[100];
+		
 	}
 	
 }

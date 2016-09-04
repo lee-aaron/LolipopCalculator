@@ -1,7 +1,7 @@
 import java.util.*;
 
-
 public class LolipopCentral {
+	
 	static Scanner scan = new Scanner(System.in);
 	protected int money;
 	
