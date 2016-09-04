@@ -17,7 +17,7 @@ public class LolipopCentral {
 		
 		while(true){
 			System.out.println("What would you like to do? ");
-			System.out.println("\n" + "Game    Shop" + "\n" + "\n" + "Save    Lollipops" + "\n" + "\n" + "Quit" + "\n");
+			System.out.println("\n" + "Game    Shop" + "\n" + "\n" + "Save    Lolipops" + "\n" + "\n" + "Quit" + "\n");
 			String opt = scan.next(); //option
 			if(opt.equalsIgnoreCase("Game")){ //access mini games
 				for(;;){
@@ -56,8 +56,8 @@ public class LolipopCentral {
 				lolipopSave.addData(money);
 				System.out.println("Your game was saved successfully" + "\n");
 			}
-			else if(opt.equalsIgnoreCase("Lollipops")){ //currency
-				System.out.println("You have " + money + " lollipops" + "\n");
+			else if(opt.equalsIgnoreCase("Lolipops")){ //currency
+				System.out.println("You have " + money + " lolipops" + "\n");
 			}
 			else if(opt.equalsIgnoreCase("Quit")){
 				break;
