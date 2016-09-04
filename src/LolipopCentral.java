@@ -1,4 +1,3 @@
-//import java.lang.reflect.Method;
 import java.util.*;
 
 public class LolipopCentral {
@@ -10,9 +9,7 @@ public class LolipopCentral {
 		
 		LolipopGames lolipopGames = new LolipopGames();
 		LolipopSave lolipopSave = new LolipopSave();
-		//Method m = LolipopSave.class.getDeclaredMethod("LolipopSave");
-		//m.setAccessible(true);
-		//m.invoke(lolipopSave);
+
 		double money = 10; // starting currency
 		
 		while(true){
@@ -53,7 +50,6 @@ public class LolipopCentral {
 			
 			}
 			else if(opt.equalsIgnoreCase("Save")){ //save progress
-				lolipopSave.addData(money);
 				System.out.println("Your game was saved successfully" + "\n");
 			}
 			else if(opt.equalsIgnoreCase("Lolipops")){ //currency
