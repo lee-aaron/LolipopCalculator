@@ -14,8 +14,9 @@ public class LolipopCentral {
 		//m.setAccessible(true);
 		//m.invoke(lolipopSave);
 		double money = 10; // starting currency
+		Boolean settings = true;
 		
-		while(true){
+		while(settings){
 			System.out.println("What would you like to do? ");
 			System.out.println("\n" + "Game    Shop" + "\n" + "\n" + "Save    Lollipops" + "\n" + "\n" + "Quit" + "\n");
 			String opt = scan.next(); //option
@@ -40,7 +41,15 @@ public class LolipopCentral {
 						continue;
 					}
 					else if(mg.equalsIgnoreCase("DiceRoll")){
-						lolipopGames.dice.rollDice();
+						System.out.println("How many lolipops do you want to bet?");
+						int bet = scan.nextInt();
+						int rolls = lolipopGames.dice.diceConfig(bet);
+						for(int i = 0; i < rolls; i++)
+						{
+							lolipopGames.dice.rollDice();
+							money += lolipopGames.dice.checkWinnings();
+							System.out.println("Money: " + money);
+						}
 						continue;
 					}
 					else{
@@ -60,6 +69,7 @@ public class LolipopCentral {
 				System.out.println("You have " + money + " lollipops" + "\n");
 			}
 			else if(opt.equalsIgnoreCase("Quit")){
+				settings = false;
 				break;
 			}
 			else{

@@ -11,10 +11,12 @@ public class LolipopSave {
 		createSaveFile();
 	}
 	
-	//Creates Save File using File and OutputStream; Saves in .txt file
+	/*Creates Save File using File and OutputStream; Saves in .txt file
+	 * Access is denied to create a save file ***Must Fix***
+	 */
 	private void createSaveFile() {
 		try {
-			file = new File("C:/LolipopData.txt");		//Temporary save location
+			file = new File("C:/Lolipop.data");		//Temporary save location
 			outFile = new FileOutputStream(file);
 			if(!file.exists()) {		//Creates file if it doesn't exist
 				file.createNewFile();
@@ -40,13 +42,16 @@ public class LolipopSave {
 	public void closeSaveFile()
 	{
 		try {
+			outFile.flush();
 			outFile.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	//Need to implement ability to read data from save file
+	/*Need to implement ability to read data from save file
+	 * Currently only reads in one value: Money
+	*/
 	public double readData() throws IOException
 	{
 		int i = 0;
