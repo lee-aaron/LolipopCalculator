@@ -1,4 +1,4 @@
-# LolipopCalculator
+# LolipopCalculator™
 
 A Calculator For: Games and Money
 
