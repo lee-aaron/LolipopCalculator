@@ -40,16 +40,8 @@ public class LolipopCentral {
 					else if(mg.equalsIgnoreCase("TicTacToe")){
 						continue;
 					}
-					else if(mg.equalsIgnoreCase("DiceRoll")){
-						System.out.println("How many lolipops do you want to bet?");
-						int bet = scan.nextInt();
-						int rolls = lolipopGames.dice.diceConfig(bet);
-						for(int i = 0; i < rolls; i++)
-						{
-							lolipopGames.dice.rollDice();
-							money += lolipopGames.dice.checkWinnings();
-							System.out.println("Money: " + money);
-						}
+					else if(mg.equalsIgnoreCase("")){
+						
 						continue;
 					}
 					else{

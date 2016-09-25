@@ -12,11 +12,11 @@ public class LolipopSave {
 	}
 	
 	/*Creates Save File using File and OutputStream; Saves in .txt file
-	 * Access is denied to create a save file ***Must Fix***
+	 * 
 	 */
 	private void createSaveFile() {
 		try {
-			file = new File("C:/Lolipop.data");		//Temporary save location
+			file = new File(System.getProperty("user.home") + "/Downloads/Lolipop.data");
 			outFile = new FileOutputStream(file);
 			if(!file.exists()) {		//Creates file if it doesn't exist
 				file.createNewFile();
