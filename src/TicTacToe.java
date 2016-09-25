@@ -70,9 +70,9 @@ public class TicTacToe
 		if(player==0)
 			mark='o';
 		grid[i][j]=mark;
-		while(playerMove()){
+		//while(playerMove()){
 			
-		}
+		//}
 		display(numpad);
 		display(grid);
 		

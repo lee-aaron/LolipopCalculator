@@ -57,7 +57,7 @@ public class LolipopSave {
 		int i = 0;
 		double data = 0;
 		try {
-			input = new FileInputStream("C:/LolipopData.txt");		//Must match File file
+			input = new FileInputStream(System.getProperty("user.home") + "/Downloads/Lolipop.data");		//Must match File file
 			while((i=input.read()) != -1) {
 				data = (double) i;
 			}
